@@ -1,0 +1,69 @@
+.FormTitle{
+  font-family:"Ubuntu";
+  color:#fa824c;
+}
+
+div{
+    margin: 30px;
+    alignt-items:center;
+}
+
+.AG-logo {
+  height: 80px;
+}
+
+body{
+  height: 15px;
+  background-image: linear-gradient(#fa824c, white);
+  background-repeat: repeat-x;
+  padding-bottom: 10px
+}
+
+.rcorners {
+    border-radius: 5px;
+    border: 2px solid #3c91e6;
+    padding: 10px;
+    width: 200px;
+    height: 20px;
+    font-family:"Ubuntu";
+    font-size: 15px;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: #3c91e6;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family:"Ubuntu";
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #3c91e6;
+    color: black;
+    border: 2px solid #3c91e6;
+    border-radius:12px;
+}
+
+.button1:hover {
+    background-color: #fa824c;
+    color: white;
+}
+
+select{
+    width: 225px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #3c91e6;
+    background-color: white;
+    font-size: 15px;
+
+}
