@@ -24,7 +24,7 @@ class Form extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('Thank you for signing up with AirGarage ' + this.state.firstName + ' ' + this.state.lastName);
+    alert('Thank you for signing up with AirGarage ' + this.state.firstName);
     event.preventDefault();
     console.log(this.state);
   }
@@ -33,14 +33,10 @@ class Form extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
 
-
-
         <img src={aglogo} className = "AG-logo" alt="aglogo" />
         <h1 className="FormTitle"> Sign Up </h1>
 
-
-
-        <div className="form-group">
+      <div>
           <input
             type="text"
             value={this.state.firstName}
@@ -51,7 +47,7 @@ class Form extends React.Component {
           />
       </div>
 
-      <div className='form-group'>
+      <div>
         <input
           type="text"
           value={this.state.lastName}
@@ -62,7 +58,7 @@ class Form extends React.Component {
         />
       </div>
 
-      <div className='form-group'>
+      <div>
         <input
           type="email"
           value={this.state.email}
@@ -73,7 +69,7 @@ class Form extends React.Component {
         />
       </div>
 
-      <div className='form-group'>
+      <div>
         <input
           type="password"
           value={this.state.password}
@@ -81,12 +77,10 @@ class Form extends React.Component {
           name = "password"
           className="rcorners"
           placeholder = "Password"
-
         />
       </div>
 
-
-      <div className='form-group'>
+      <div>
         <input
           type="date"
           value={this.state.dob}
@@ -98,11 +92,21 @@ class Form extends React.Component {
         />
       </div>
 
+      <div>
+        <input
+          type="tel"
+          value={this.state.phone}
+          onChange={this.handleChange}
+          name = "phone"
+          className="rcorners"
+          placeholder = "(xxx)xxx-xxxx"
+        />
+      </div>
 
-      <div className='form-group'>
+      <div>
         <select profile={this.state.profile} onChange={this.handleChange}>
           <option profile="findparking">Find Parking</option>
-          <option profile="listaspot">List a Spot</option>
+          <option profile="listaspot">List a spot</option>
           <option profile="both">Both</option>
         </select>
         <input
@@ -112,7 +116,7 @@ class Form extends React.Component {
         />
       </div>
 
-      <div className = "form-group">
+      <div>
         <button className= "button button1">
           Sign up
         </button>

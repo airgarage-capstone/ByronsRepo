@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+#root{
+  background-color: #F8F8FF;
+  border-radius: 10px;
+  width: 550px;
+  height:525px;
+  margin:auto;
+  background-image: linear-gradient(#fa824c, white);
+  background-repeat: repeat-x;
+  padding-bottom: 1px
+}
+
+.FormTitle{
+  font-family: 'Ubuntu', sans-serif;
+  color:#3c91e6;
+}
+
+div{
+    margin: 30px;
+}
+
+.AG-logo {
+  height: 70px;
+
+}
+
+body{
+  height: 15px;
+
+}
+
+.rcorners {
+    border-radius: 5px;
+    border: 2px solid #3c91e6;
+    padding: 10px;
+    width: 200px;
+    height: 20px;
+    font-family:"Ubuntu";
+    font-size: 15px;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: #3c91e6;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family:"Ubuntu";
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #3c91e6;
+    color: white;
+    border: 2px solid #3c91e6;
+    border-radius:12px;
+}
+
+.button1:hover {
+    background-color: #fa824c;
+    color: white;
+}
+
+select{
+    width: 225px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #3c91e6;
+    background-color: white;
+    font-size: 15px;
+}
