@@ -32,6 +32,7 @@ class LogIn extends React.Component{
         <img src={aglogo} className = "AG-logo" alt="aglogo" />
         <h1 className="FormTitle"> Log In </h1>
 
+
         <div>
           <input
             type="email"
@@ -59,7 +60,7 @@ class LogIn extends React.Component{
             Log In
           </button>
         </div>
-
+      
       </form>
     );
   }

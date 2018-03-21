@@ -1,6 +1,11 @@
+
 .App {
   text-align: center;
+}
 
+.positionClasses{
+  display:flex;
+  flex-direction: row;
 }
 
 .App-logo {
@@ -19,8 +24,9 @@
   font-size: 38px;
   font-family:"Ubuntu";
   padding-top: 15px;
-  color:white;
+  color:#fa824c;;
   text-shadow: 3px 2px #3c91e6;
+  text-align: center;
 
 }
 

@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-#root{
-  background-color: #F8F8FF;
-  border-radius: 10px;
-  width: 550px;
-  height:525px;
-  margin:auto;
-  background-image: linear-gradient(#fa824c, white);
-  background-repeat: repeat-x;
-  padding-bottom: 1px
-}
+
 
 .FormTitle{
   font-family: 'Ubuntu', sans-serif;
@@ -19,6 +10,7 @@
 div{
     margin: 30px;
 }
+
 
 .AG-logo {
   height: 70px;

@@ -121,7 +121,6 @@ class Form extends React.Component {
           Sign up
         </button>
       </div>
-
     </form>
 
     );

@@ -1,3 +1,6 @@
+
+
+
 .FormTitle{
   font-family:"Ubuntu";
   color:#fa824c;
@@ -5,7 +8,6 @@
 
 div{
     margin: 30px;
-    alignt-items:center;
 }
 
 .AG-logo {
@@ -14,9 +16,6 @@ div{
 
 body{
   height: 15px;
-  background-image: linear-gradient(#fa824c, white);
-  background-repeat: repeat-x;
-  padding-bottom: 10px
 }
 
 .rcorners {
