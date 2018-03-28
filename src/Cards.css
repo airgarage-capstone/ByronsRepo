@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 .cardView{
-  background-color: #F8F8FF;
   width: 275px;
   height:360px;
-  margin:auto;
-  background-image: linear-gradient(#fa824c, white);
+  background-image: linear-gradient(white, #3c91e6);
   background-repeat: repeat-x;
   padding-bottom: 1px;
-  outline-width: thick;
-  outline-style: double;
-  outline-color: #3c91e6;
-  padding: 2px 10px;
+  border-radius:20px;
+}
+
+.cardView:hover{
+  box-shadow: 0 8px 16px 0 #fa824c;
 }
 
 .container {
@@ -23,17 +22,29 @@ div{
 
 th {
   font-family: 'Ubuntu', sans-serif;
-  color:#3c91e6;
+  color:black;
+  font-size: 17px;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 2px;
+
 
 }
 
 td {
   font-family: 'Ubuntu', sans-serif;
-  color:grey;
+  color:#fa824c;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 10px;
+
 }
 
 .AG-logo {
   height: 120px;
-  width: 250px;
-  padding-top: 10px;
+  width:inherit;
+
+  padding-bottom: 5px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }

@@ -1,16 +1,18 @@
-
 .App {
   text-align: center;
-}
-
-.positionClasses{
-  display:flex;
-  flex-direction: row;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+}
+
+.positionClasses{
+  display:inline-block;
+  padding-right: 15px;
+  padding-bottom: 15px;
+
+  /*flex-direction: row;*/
 }
 
 .App-header {
@@ -21,7 +23,7 @@
 }
 
 .App-title {
-  font-size: 38px;
+  font-size: 50px;
   font-family:"Ubuntu";
   padding-top: 15px;
   color:#fa824c;;
@@ -33,6 +35,7 @@
 .App-intro {
   font-size: large;
 }
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
