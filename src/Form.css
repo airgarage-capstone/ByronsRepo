@@ -1,9 +1,16 @@
 
-
-
 .FormTitle{
   font-family:"Ubuntu";
   color:#fa824c;
+}
+
+.view{
+  width: 350px;
+  height:500px;
+  background-image: linear-gradient(white, #3c91e6);
+  background-repeat: repeat-x;
+  padding-bottom: 1px;
+  border-radius:20px;
 }
 
 div{
@@ -55,14 +62,9 @@ body{
     background-color: #fa824c;
     color: white;
 }
+.positionClasses{
+  display:inline-block;
+  margin-right:20px;
 
-select{
-    width: 225px;
-    height: 35px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #3c91e6;
-    background-color: white;
-    font-size: 15px;
 
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import aglogo from './airgarageLogo.png';
 import './Form.css';
 
@@ -12,7 +13,7 @@ class Form extends React.Component {
       password:'',
       dob:'',
       phone:'',
-      profile: ''
+      accountType: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -24,19 +25,38 @@ class Form extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('Thank you for signing up with AirGarage ' + this.state.firstName);
-    event.preventDefault();
+
     console.log(this.state);
+    event.preventDefault();
+
+    const user = {
+      first_name : this.state.firstName,
+      last_name: this.state.lastName,
+      username: this.state.email,
+      password: this.state.password,
+      accountType: this.state.accountType,
+      dob: this.state.dob,
+      phone : this.state.phone
+    };
+
+    axios.post('http://staging.airgara.ge/api/register/', user)
+      .then(res => {
+        alert('Thank you for signing up with AirGarage ' + this.state.firstName)
+      })
+
   }
 
   render() {
     return (
+      <div className = 'positionClasses'>
       <form onSubmit={this.handleSubmit}>
 
-        <img src={aglogo} className = "AG-logo" alt="aglogo" />
+          <div className ='view'>
+
+
         <h1 className="FormTitle"> Sign Up </h1>
 
-      <div>
+        <div>
           <input
             type="text"
             value={this.state.firstName}
@@ -45,9 +65,10 @@ class Form extends React.Component {
             className="rcorners"
             placeholder = "First Name"
           />
-      </div>
+        </div>
 
-      <div>
+
+        <div>
         <input
           type="text"
           value={this.state.lastName}
@@ -58,6 +79,7 @@ class Form extends React.Component {
         />
       </div>
 
+
       <div>
         <input
           type="email"
@@ -67,9 +89,10 @@ class Form extends React.Component {
           className="rcorners"
           placeholder = "airgarage@example.com"
         />
-      </div>
+        </div>
 
-      <div>
+
+        <div>
         <input
           type="password"
           value={this.state.password}
@@ -78,9 +101,9 @@ class Form extends React.Component {
           className="rcorners"
           placeholder = "Password"
         />
-      </div>
+        </div>
 
-      <div>
+        <div>
         <input
           type="date"
           value={this.state.dob}
@@ -90,38 +113,40 @@ class Form extends React.Component {
           className="rcorners"
           placeholder = "Date of Birth (mm/dd/yyyy)"
         />
-      </div>
+        </div>
 
-      <div>
+        <div>
         <input
-          type="tel"
+          type="text"
           value={this.state.phone}
           onChange={this.handleChange}
           name = "phone"
           className="rcorners"
           placeholder = "(xxx)xxx-xxxx"
         />
-      </div>
+        </div>
 
-      <div>
-        <select profile={this.state.profile} onChange={this.handleChange}>
-          <option profile="findparking">Find Parking</option>
-          <option profile="listaspot">List a spot</option>
-          <option profile="both">Both</option>
+        <div>
+
+
+        <select value={this.state.accountType} onChange={this.handleChange} name="accountType">
+          <option value="Find parking">Find Parking</option>
+          <option value="List a spot">List a spot</option>
+          <option value="Both">Both</option>
         </select>
-        <input
-          type = "hidden"
-          name = "profile"
-          value={this.state.profile}
-        />
-      </div>
 
-      <div>
+
+        </div>
+
+        <div>
         <button className= "button button1">
           Sign up
         </button>
+        </div>
       </div>
-    </form>
+      </form>
+    </div>
+
 
     );
   }

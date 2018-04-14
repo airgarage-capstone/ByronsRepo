@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import aglogo from './airgarageLogo.png';
+import axios from 'axios';
 import './LogIn.css';
 
 class LogIn extends React.Component{
@@ -19,21 +20,33 @@ class LogIn extends React.Component{
   }
 
   handleSubmit(event){
-    alert('Account Not Found');
+    /*alert('Account Not Found');*/
     event.preventDefault();
     console.log(this.state);
+
+    const user = {
+			username: this.state.email,
+			password: this.state.password
+		}
+
+		axios.post('http://staging.airgara.ge/api/auth/', { user })
+		.then(res => {
+				console.log(res);
+				console.log(res.data);
+			})
   }
 
   render()
   {
     return(
+      <div className = 'positionClasses'>
       <form onSubmit = {this.handleSubmit}>
 
-        <img src={aglogo} className = "AG-logo" alt="aglogo" />
+        <div className = 'views'>
         <h1 className="FormTitle"> Log In </h1>
 
 
-        <div>
+          <div>
           <input
             type="email"
             value={this.state.email}
@@ -42,9 +55,9 @@ class LogIn extends React.Component{
             className="rcorners"
             placeholder = "airgarage@example.com"
           />
-        </div>
+          </div>
 
-        <div>
+          <div>
           <input
             type="password"
             value={this.state.password}
@@ -53,15 +66,19 @@ class LogIn extends React.Component{
             className="rcorners"
             placeholder = "Password"
           />
-        </div>
+          </div>
 
-        <div>
+          <div>
           <button className= "button button1">
             Log In
           </button>
+          </div>
+
         </div>
-      
-      </form>
+        </form>
+        </div>
+
+
     );
   }
 }
