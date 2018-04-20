@@ -20,19 +20,18 @@ class LogIn extends React.Component{
   }
 
   handleSubmit(event){
-    /*alert('Account Not Found');*/
-    event.preventDefault();
+
     console.log(this.state);
+    event.preventDefault();
 
     const user = {
 			username: this.state.email,
 			password: this.state.password
 		}
 
-		axios.post('http://staging.airgara.ge/api/auth/', { user })
+		axios.post('http://staging.airgara.ge/api/auth/', user)
 		.then(res => {
-				console.log(res);
-				console.log(res.data);
+				alert('Welcome Back')
 			})
   }
 

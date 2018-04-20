@@ -129,7 +129,8 @@ class Form extends React.Component {
         <div>
 
 
-        <select value={this.state.accountType} onChange={this.handleChange} name="accountType">
+        <select  name="accountType" onChange={this.handleChange} >
+          <option>Select Account Type </option>
           <option value="Find parking">Find Parking</option>
           <option value="List a spot">List a spot</option>
           <option value="Both">Both</option>
